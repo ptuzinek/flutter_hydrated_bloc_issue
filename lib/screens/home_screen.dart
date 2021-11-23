@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_hydrated_bloc_issue/cubit/second/example_cubit.dart';
+import 'package:flutter_hydrated_bloc_issue/cubit/example/example_cubit.dart';
 import 'package:flutter_hydrated_bloc_issue/screens/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
