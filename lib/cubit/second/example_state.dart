@@ -1,8 +1,8 @@
 part of 'example_cubit.dart';
 
-class SecondCubitState {
+class ExampleCubitState {
   int value;
-  SecondCubitState({
+  ExampleCubitState({
     required this.value,
   });
 
@@ -12,14 +12,14 @@ class SecondCubitState {
     };
   }
 
-  factory SecondCubitState.fromMap(Map<String, dynamic> map) {
-    return SecondCubitState(
+  factory ExampleCubitState.fromMap(Map<String, dynamic> map) {
+    return ExampleCubitState(
       value: map['value'],
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory SecondCubitState.fromJson(String source) =>
-      SecondCubitState.fromMap(json.decode(source));
+  factory ExampleCubitState.fromJson(String source) =>
+      ExampleCubitState.fromMap(json.decode(source));
 }
