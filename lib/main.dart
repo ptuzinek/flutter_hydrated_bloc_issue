@@ -26,13 +26,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<ExampleCubit>(
-          // lazy: false, // this solves problem
-          create: (_) => ExampleCubit(),
-        ),
-      ],
+    return BlocProvider<ExampleCubit>(
+      // lazy: false, // this solves problem
+      create: (_) => ExampleCubit(),
       child: const MaterialApp(
         home: HomeScreen(),
       ),
