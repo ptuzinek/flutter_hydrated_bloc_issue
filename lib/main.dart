@@ -9,15 +9,12 @@ import 'package:path_provider/path_provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final storage = await HydratedStorage.build(
+  HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
 
-  HydratedBlocOverrides.runZoned(
-    () => runApp(
-      const MyApp(),
-    ),
-    storage: storage,
+  runApp(
+    const MyApp(),
   );
 }
 
@@ -29,7 +26,6 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<ExampleCubit>(
-          // lazy: false, // this solves problem
           create: (_) => ExampleCubit(),
         ),
       ],

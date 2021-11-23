@@ -3,18 +3,18 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 part 'example_state.dart';
 
-class ExampleCubit extends HydratedCubit<SecondCubitState> {
-  ExampleCubit() : super(SecondCubitState(value: 0));
+class ExampleCubit extends HydratedCubit<ExampleCubitState> {
+  ExampleCubit() : super(ExampleCubitState(value: 0));
 
   void someMethod() {}
 
   @override
-  SecondCubitState? fromJson(Map<String, dynamic> json) {
-    return SecondCubitState.fromMap(json);
+  ExampleCubitState? fromJson(Map<String, dynamic> json) {
+    return ExampleCubitState.fromMap(json);
   }
 
   @override
-  Map<String, dynamic>? toJson(SecondCubitState state) {
+  Map<String, dynamic>? toJson(ExampleCubitState state) {
     return state.toMap();
   }
 }
